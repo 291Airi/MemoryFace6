@@ -15,6 +15,7 @@
 		41334E58240A12A50017C0E4 /* e0772_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 41334E57240A12A50017C0E4 /* e0772_2.png */; };
 		41334E5A240A16F40017C0E4 /* icon_74-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 41334E59240A16F40017C0E4 /* icon_74-1.png */; };
 		4157D1D0239B9BED00BE0979 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157D1CF239B9BED00BE0979 /* Todo.swift */; };
+		4163F43D250D09580053D9B0 /* skip_to_do.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4163F43C250D09580053D9B0 /* skip_to_do.mp3 */; };
 		41B01F9323769A4300589178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B01F9223769A4300589178 /* AppDelegate.swift */; };
 		41B01F9523769A4300589178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B01F9423769A4300589178 /* ViewController.swift */; };
 		41B01F9823769A4300589178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41B01F9623769A4300589178 /* Main.storyboard */; };
@@ -26,7 +27,6 @@
 		41B01FC32376D12100589178 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B01FC22376D12100589178 /* QuizViewController.swift */; };
 		41B01FC72376D49900589178 /* mark_maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B01FC52376D49900589178 /* mark_maru.png */; };
 		41B01FC82376D49900589178 /* mark_batsu.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B01FC62376D49900589178 /* mark_batsu.png */; };
-		41C7D28324CC1BCF00748918 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C7D28224CC1BCF00748918 /* TestViewController.swift */; };
 		41FB4B8224C0772900B3489B /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB4B8124C0772900B3489B /* ChoiceViewController.swift */; };
 		41FCF6D72418CFCB00BEE2E4 /* seikai.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 41FCF6D52418CFCB00BEE2E4 /* seikai.mp3 */; };
 		41FCF6D82418CFCB00BEE2E4 /* hazure.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 41FCF6D62418CFCB00BEE2E4 /* hazure.mp3 */; };
@@ -57,6 +57,7 @@
 		41334E57240A12A50017C0E4 /* e0772_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = e0772_2.png; sourceTree = "<group>"; };
 		41334E59240A16F40017C0E4 /* icon_74-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_74-1.png"; sourceTree = "<group>"; };
 		4157D1CF239B9BED00BE0979 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		4163F43C250D09580053D9B0 /* skip_to_do.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skip_to_do.mp3; sourceTree = "<group>"; };
 		41B01F8F23769A4300589178 /* MemoryFace2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryFace2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B01F9223769A4300589178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41B01F9423769A4300589178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		41B01FC22376D12100589178 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		41B01FC52376D49900589178 /* mark_maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark_maru.png; sourceTree = "<group>"; };
 		41B01FC62376D49900589178 /* mark_batsu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark_batsu.png; sourceTree = "<group>"; };
-		41C7D28224CC1BCF00748918 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		41FB4B8124C0772900B3489B /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		41FCF6D52418CFCB00BEE2E4 /* seikai.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = seikai.mp3; sourceTree = "<group>"; };
 		41FCF6D62418CFCB00BEE2E4 /* hazure.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hazure.mp3; sourceTree = "<group>"; };
@@ -118,6 +118,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4163F43E250D0EA80053D9B0 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				4163F43C250D09580053D9B0 /* skip_to_do.mp3 */,
+				41FCF6D52418CFCB00BEE2E4 /* seikai.mp3 */,
+				41FCF6D62418CFCB00BEE2E4 /* hazure.mp3 */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
 		41B01F8623769A4300589178 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		41B01F9123769A4300589178 /* MemoryFace2 */ = {
 			isa = PBXGroup;
 			children = (
+				4163F43E250D0EA80053D9B0 /* music */,
 				41B01FC42376D49900589178 /* image */,
 				41B01F9223769A4300589178 /* AppDelegate.swift */,
 				41B01F9423769A4300589178 /* ViewController.swift */,
@@ -151,7 +162,6 @@
 				41B01F9B23769A4700589178 /* LaunchScreen.storyboard */,
 				41B01F9E23769A4700589178 /* Info.plist */,
 				41B01FC023769A6800589178 /* SeaveViewController.swift */,
-				41C7D28224CC1BCF00748918 /* TestViewController.swift */,
 				41FB4B8124C0772900B3489B /* ChoiceViewController.swift */,
 				41B01FC22376D12100589178 /* QuizViewController.swift */,
 				4157D1CF239B9BED00BE0979 /* Todo.swift */,
@@ -188,8 +198,6 @@
 				41B01FC62376D49900589178 /* mark_batsu.png */,
 				41334E412409DFDB0017C0E4 /* unnamed.png */,
 				41180CD923AE1C1200AB280C /* nigaoe_oda_nobunaga.png */,
-				41FCF6D62418CFCB00BEE2E4 /* hazure.mp3 */,
-				41FCF6D52418CFCB00BEE2E4 /* seikai.mp3 */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -313,6 +321,7 @@
 				41334E58240A12A50017C0E4 /* e0772_2.png in Resources */,
 				41B01F9D23769A4700589178 /* LaunchScreen.storyboard in Resources */,
 				41B01F9A23769A4700589178 /* Assets.xcassets in Resources */,
+				4163F43D250D09580053D9B0 /* skip_to_do.mp3 in Resources */,
 				41334E5A240A16F40017C0E4 /* icon_74-1.png in Resources */,
 				41FCF6D82418CFCB00BEE2E4 /* hazure.mp3 in Resources */,
 				41FCF6D72418CFCB00BEE2E4 /* seikai.mp3 in Resources */,
@@ -387,7 +396,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41C7D28324CC1BCF00748918 /* TestViewController.swift in Sources */,
 				4157D1D0239B9BED00BE0979 /* Todo.swift in Sources */,
 				41B01F9523769A4300589178 /* ViewController.swift in Sources */,
 				41B01F9323769A4300589178 /* AppDelegate.swift in Sources */,
