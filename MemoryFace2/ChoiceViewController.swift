@@ -134,7 +134,7 @@
 //
 //    //セルが押された時に呼ばれるメソッド
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//            print("\(NameArray[indexPath.row])が選ばれました！")
+//            print("\(NameArray[indexPath.row])が選ばれました")
 //        // (1)Realmのインスタンスを生成する
 //            let realm2 = try! Realm()
 //        // (2)全データの取得

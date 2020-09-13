@@ -168,8 +168,6 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
             let results = realm1.objects(personArray.self)
         // (3)取得データの確認
             print(results)
-        print("ににににににににににに")
-        
         // 取得件数の表示
         print("results\(results.count)")
         

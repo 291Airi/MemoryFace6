@@ -24,7 +24,7 @@ class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UI
     var hint1 = ""
     var hint2 = ""
     var  URL = ""
-    private var realm: Realm!//person
+    private var realm: Realm!
 
     
     @IBOutlet weak var nameTextField: UITextField!
