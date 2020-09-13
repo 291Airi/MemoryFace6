@@ -125,7 +125,7 @@ class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UI
             realm.delete(results)
         }
             // (3)取得データの確認
-                   print("消したよ2\(results)")
+                   print("消したよ\(results)")
     }
 
 

@@ -24,7 +24,7 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
     @IBOutlet weak var ansewrButton: UIButton!
     @IBOutlet weak var mistake: UIButton!
     
-    
+
     var audioPlayer: AVAudioPlayer!
     var timer: Timer!
     var timer1: Timer!
