@@ -6,74 +6,78 @@
 //  Copyright © 2020 福井　愛梨. All rights reserved.
 //
 
-//import UIKit
-//import RealmSwift
-//
-//class TableViewController: UIViewController, UITextFieldDelegate {
-//
-//    var todoItem: Results<personArray>!
-//
-//    @IBOutlet weak var tableview: UITableView!
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // 永続化されているデータを取りだす
-//
-//        let persons = List<personArray>()
-//
-//
-//        do{
-//            let realm = try Realm()
-//            todoItem = realm.objects(personArray.self)
-//            //tableView.reloadData()
-//            super.viewDidLoad()
-//        }catch{
-//
-//        }
-//
-//    }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        //self.tableView.reloadData()
-//        super.viewDidLoad()
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//    }
-//
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int)->Int {
-//        return todoItem.count
-//    }
-//
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexpath: NSIndexPath)->UITableViewCell {
-//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
-//
-//        let object = todoItem[indexpath.row]
-//
-//        cell.textLabel?.text = object.textFieldString
-//        return cell
-//    }
-//
-//    // TableViewのCellの削除を行った際に、Realmに保存したデータを削除する
-//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCell.EditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//
-//
-//        if(editingStyle == UITableViewCell.EditingStyle.delete) {
-//            do{
-//                let realm = try Realm()
-//                try realm.write {
-//                    realm.delete(self.todoItem[indexPath.row])
-//                }
-//                tableView.deleteRows(at:[IndexPath], with: UITableView.RowAnimation.Fade)
-//            }catch{
-//            }
-//            tableView.reloadData()
-//        }
-//    }
-//}
+import UIKit
+import RealmSwift
+
+class ChoiceViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
+    var todoItem: Results<personArray>!
+
+    @IBOutlet weak var tableview: UITableView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // 永続化されているデータを取りだす
+
+        let persons = List<personArray>()
+
+
+        do{
+            let realm = try Realm()
+            todoItem = realm.objects(personArray.self)
+            //tableView.reloadData()
+            super.viewDidLoad()
+        }catch{
+
+        }
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //self.tableView.reloadData()
+        super.viewDidLoad()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
+        return todoItem.count
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexpath: NSIndexPath)->UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+
+        let object = todoItem[indexpath.row]
+
+        cell.textLabel?.text = object.textFieldString
+        return cell
+    }
+
+    // TableViewのCellの削除を行った際に、Realmに保存したデータを削除する
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCell.EditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+
+
+        if(editingStyle == UITableViewCell.EditingStyle.delete) {
+            do{
+                let realm = try Realm()
+                try realm.write {
+                    realm.delete(self.todoItem[indexPath.row])
+                }
+                tableView.deleteRows(at:[IndexPath], with: UITableView.RowAnimation.Fade)
+            }catch{
+            }
+            tableView.reloadData()
+        }
+    }
+}
 
 
 

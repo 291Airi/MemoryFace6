@@ -19,7 +19,6 @@ class personArray: Object{
 
 class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate{
 
-//    var todoItem: Results<Todo>!
     var textFieldString = ""
     var hint1 = ""
     var hint2 = ""

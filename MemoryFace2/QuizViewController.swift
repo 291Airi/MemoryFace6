@@ -35,8 +35,6 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
     
     private var realm: Realm!
     
-   
-
     override func viewDidLoad() {
         playSound(name: "skip_to_do")
         // (1)Realmのインスタンスを生成する
