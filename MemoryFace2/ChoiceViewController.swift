@@ -8,12 +8,9 @@
 
 import UIKit
 import RealmSwift
+import AssetsLibrary
 
-class ChoiceViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
+class ChoiceViewController: UIViewController,UITableViewDelegate{
     
     var todoItem: Results<personArray>!
 
@@ -71,13 +68,13 @@ class ChoiceViewController: UIViewController,UITableViewDataSource,UITableViewDe
                 try realm.write {
                     realm.delete(self.todoItem[indexPath.row])
                 }
-                tableView.deleteRows(at:[IndexPath], with: UITableView.RowAnimation.Fade)
+                tableView.deleteRows(at: [(indexPath as IndexPath)], with: UITableView.RowAnimation.fade)
             }catch{
             }
             tableView.reloadData()
-        }
     }
 }
+
 
 
 
@@ -172,4 +169,5 @@ class ChoiceViewController: UIViewController,UITableViewDataSource,UITableViewDe
 //    }
 //
 //
-//}
+    
+}

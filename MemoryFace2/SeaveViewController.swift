@@ -18,13 +18,12 @@ class personArray: Object{
    }
 
 class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate{
-
+    
     var textFieldString = ""
     var hint1 = ""
     var hint2 = ""
     var  URL = ""
     private var realm: Realm!
-
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var hint1TextField: UITextField!

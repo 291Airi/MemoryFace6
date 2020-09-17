@@ -24,7 +24,9 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
     @IBOutlet weak var ansewrButton: UIButton!
     @IBOutlet weak var mistake: UIButton!
     
-
+    //曲のファイル
+    var fileNameArray = [String]()
+    
     var audioPlayer: AVAudioPlayer!
     var timer: Timer!
     var timer1: Timer!
@@ -36,7 +38,9 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
     private var realm: Realm!
     
     override func viewDidLoad() {
-        playSound(name: "skip_to_do")
+        //fileNameArrayにファイル名を入れる
+        fileNameArray = ["hazure.mp3","seikai.mp3","skip_to_do.mp3"]
+        
         // (1)Realmのインスタンスを生成する
             let realm1 = try! Realm()
         // (2)全データの取得
@@ -120,7 +124,7 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
         ansewrButton.isHidden = true
         mistake.isHidden = true
         
-        playSound(name: "hazure")
+        let audioPlayer = URL(fileURLWithPath: Bundle.main.path(forResource: fileNameArray[1], ofType:  "mp3")!)
     }
 
     @IBAction func ansewrButton(_ sender: Any) {
@@ -135,7 +139,7 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
             print(results)
                
          if results[num].textFieldString == textFieldString{
-              playSound(name: "seikai")
+            let audioPlayer = URL(fileURLWithPath: Bundle.main.path(forResource: fileNameArray[2], ofType:  "mp3")!)
                answerLabel.text = results[num].textFieldString
                self.image.image = UIImage(named: "mark_maru.png")
                 image.isHidden = false
@@ -148,7 +152,7 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
                 mistake.isHidden = true
             
                 }else{
-                    playSound(name: "hazure")
+            let audioPlayer = URL(fileURLWithPath: Bundle.main.path(forResource: fileNameArray[2], ofType:  "mp3")!)
                     self.image.image = UIImage(named: "mark_batsu.png")
                     image.isHidden = false
                     hintLabel.isHidden = true
@@ -185,24 +189,4 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
         image.isHidden = true
         }
 
-}
-extension ViewController: AVAudioPlayerDelegate {
-    func playSound(name: String) {
-        guard let path = Bundle.main.path(forResource: name, ofType: "mp3") else {
-            print("音源ファイルが見つかりません")
-            return
-        }
-
-        do {
-            // AVAudioPlayerのインスタンス化
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-
-            // AVAudioPlayerのデリゲートをセット
-            audioPlayer.delegate = self
-
-            // 音声の再生
-            audioPlayer.play()
-        } catch {
-        }
-    }
 }

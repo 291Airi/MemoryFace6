@@ -609,7 +609,6 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nigaoe_oda_nobunaga.png" translatesAutoresizingMaskIntoConstraints="NO" id="s2b-6w-mQB">
                                 <rect key="frame" x="20" y="103" width="374" height="265"/>
-                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="265" id="Nbc-C1-Mtq"/>
                                     <constraint firstAttribute="width" constant="374" id="xE3-iB-PAz"/>
@@ -1135,12 +1134,24 @@
                                     <constraint firstAttribute="height" constant="300" id="h7Z-nO-qnJ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rE-mC-EBX">
+                                <rect key="frame" x="302" y="20" width="62" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="操作説明">
+                                    <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kY3-nS-wuS" kind="show" id="Rnf-Ko-Qad"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YPC-k6-gD3" firstAttribute="centerX" secondItem="Ytv-QC-CYA" secondAttribute="centerX" id="0Xe-eo-U7e"/>
                             <constraint firstItem="NYo-Pn-HpA" firstAttribute="centerX" secondItem="Ytv-QC-CYA" secondAttribute="centerX" constant="0.10000000000000001" id="P2Q-WG-l4b"/>
                             <constraint firstItem="5Nr-Oe-Hxe" firstAttribute="centerX" secondItem="Ytv-QC-CYA" secondAttribute="centerX" id="WIV-j5-mqn"/>
+                            <constraint firstItem="5Nr-Oe-Hxe" firstAttribute="top" secondItem="7rE-mC-EBX" secondAttribute="bottom" constant="18" id="Zk4-cs-hxA"/>
+                            <constraint firstItem="m8a-jI-kJc" firstAttribute="trailing" secondItem="7rE-mC-EBX" secondAttribute="trailing" constant="50" id="bX4-dD-nXG"/>
                             <constraint firstItem="NYo-Pn-HpA" firstAttribute="top" secondItem="YPC-k6-gD3" secondAttribute="bottom" constant="20" id="bxU-za-A13"/>
                             <constraint firstItem="YPC-k6-gD3" firstAttribute="centerX" secondItem="Ytv-QC-CYA" secondAttribute="centerX" constant="0.10000000000000001" id="ga9-wo-5zj"/>
                             <constraint firstItem="Mds-W8-mcu" firstAttribute="centerX" secondItem="Ytv-QC-CYA" secondAttribute="centerX" constant="0.10000000000000001" id="ghD-I6-gKJ"/>
@@ -1204,7 +1215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUj-dX-bQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394.20289855072468" y="930.16304347826099"/>
+            <point key="canvasLocation" x="1174" y="218"/>
         </scene>
         <!--Seave View Controller-->
         <scene sceneID="HcT-yJ-h2Y">
@@ -1345,8 +1356,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="FOG-7H-nY7"/>
-        <segue reference="aXg-yE-0N9"/>
-        <segue reference="mM8-36-HHn"/>
+        <segue reference="hJc-wV-brm"/>
+        <segue reference="bZU-my-XPx"/>
         <segue reference="Lga-om-Ca6"/>
     </inferredMetricsTieBreakers>
     <resources>

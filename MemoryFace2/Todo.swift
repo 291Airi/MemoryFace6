@@ -16,5 +16,4 @@ class Obj: Object{
      @objc dynamic var hint2: String?
      @objc dynamic var pictureurl: String?
     
-    
 }
