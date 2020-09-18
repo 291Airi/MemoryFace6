@@ -8,10 +8,8 @@
 
 import UIKit
 import RealmSwift
-import AVFoundation
 
-
-class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDelegate{
+class QuizViewController: UIViewController,UITextFieldDelegate{
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var nextquiz: UIButton!
@@ -24,22 +22,14 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
     @IBOutlet weak var ansewrButton: UIButton!
     @IBOutlet weak var mistake: UIButton!
     
-    //曲のファイル
-    var fileNameArray = [String]()
-    
-    var audioPlayer: AVAudioPlayer!
     var timer: Timer!
-    var timer1: Timer!
     var textFieldString = ""
     
     var num: Int!
-    //var resultscount:Int = 0
     
     private var realm: Realm!
     
     override func viewDidLoad() {
-        //fileNameArrayにファイル名を入れる
-        fileNameArray = ["hazure.mp3","seikai.mp3","skip_to_do.mp3"]
         
         // (1)Realmのインスタンスを生成する
             let realm1 = try! Realm()
@@ -123,8 +113,6 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
         hintLabel.isHidden = true
         ansewrButton.isHidden = true
         mistake.isHidden = true
-        
-        let audioPlayer = URL(fileURLWithPath: Bundle.main.path(forResource: fileNameArray[1], ofType:  "mp3")!)
     }
 
     @IBAction func ansewrButton(_ sender: Any) {
@@ -139,7 +127,6 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
             print(results)
                
          if results[num].textFieldString == textFieldString{
-            let audioPlayer = URL(fileURLWithPath: Bundle.main.path(forResource: fileNameArray[2], ofType:  "mp3")!)
                answerLabel.text = results[num].textFieldString
                self.image.image = UIImage(named: "mark_maru.png")
                 image.isHidden = false
@@ -152,7 +139,6 @@ class QuizViewController: UIViewController,AVAudioPlayerDelegate, UITextFieldDel
                 mistake.isHidden = true
             
                 }else{
-            let audioPlayer = URL(fileURLWithPath: Bundle.main.path(forResource: fileNameArray[2], ofType:  "mp3")!)
                     self.image.image = UIImage(named: "mark_batsu.png")
                     image.isHidden = false
                     hintLabel.isHidden = true

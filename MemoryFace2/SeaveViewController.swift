@@ -87,46 +87,6 @@ class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }
         
         }
-        
-    
-    @IBAction func erase(_ sender: Any) {
-        let alert: UIAlertController = UIAlertController(title: "アラート表示", message: "全データを消去していいですか？", preferredStyle:  UIAlertController.Style.alert)
-        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
-            // ボタンが押された時の処理を書く（クロージャ実装）
-            (action: UIAlertAction!) -> Void in
-            let config = Realm.Configuration(inMemoryIdentifier: "inMemory")
-            let realm = try! Realm(configuration: config)
-            print("消去名前",realm)
-        })
-        
-        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
-            (action: UIAlertAction!) -> Void in
-            print("Cancel")
-        })
-        alert.addAction(cancelAction)
-        alert.addAction(defaultAction)
-        present(alert, animated: true, completion: nil)
-        var config = Realm.Configuration()
-        config.deleteRealmIfMigrationNeeded = true
-        let realm = try! Realm(configuration: config)
-    }
-    
-    @IBAction func kesu(_ sender: Any) {
-        // (1)Realmのインスタンスを生成する
-               let realm = try! Realm()
-        // (2)全データの取得
-               let results = realm.objects(personArray.self)
-        // (3)取得データの確認
-               print("消したよ\(results)")
-        
-        try! realm.write {
-            realm.delete(results)
-        }
-            // (3)取得データの確認
-                   print("消したよ\(results)")
-    }
-
-
 }
     
     

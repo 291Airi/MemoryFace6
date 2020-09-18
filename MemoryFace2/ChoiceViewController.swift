@@ -42,13 +42,14 @@ class ChoiceViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        print("aaaaa")
     }
 
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
         return todoItem.count
- 
+        print("bbbbb")
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
