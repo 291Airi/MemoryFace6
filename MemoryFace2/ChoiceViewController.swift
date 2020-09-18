@@ -20,7 +20,6 @@ class ChoiceViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         // 永続化されているデータを取りだす
-        
         let persons = List<personArray>()
         
         do{
@@ -37,8 +36,8 @@ class ChoiceViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.tableView.reloadData()
         super.viewDidLoad()
+        print("ああああああ")
     }
 
     override func didReceiveMemoryWarning() {
