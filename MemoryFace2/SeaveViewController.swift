@@ -33,6 +33,9 @@ class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameTextField.delegate = self
+        hint1TextField.delegate = self
+        hint2TextField.delegate = self
         }
     
     @IBAction func albumButton(_ sender: Any) {
@@ -87,10 +90,11 @@ class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }
         
         }
-}
     
-    
-
-
-
+         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+             textField.resignFirstResponder()
+             return true
+             
+         }
+    }
 

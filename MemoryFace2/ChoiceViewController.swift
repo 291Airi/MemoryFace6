@@ -37,26 +37,19 @@ class ChoiceViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         super.viewDidLoad()
-        print("ああああああ")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        print("aaaaa")
     }
 
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
         return todoItem.count
-        print("bbbbb")
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      
-        print("ccccc")
-        
-
               let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
              
             
@@ -66,19 +59,28 @@ class ChoiceViewController: UIViewController, UITableViewDelegate, UITableViewDa
               return cell
  
           }
-// TableViewのCellの削除を行った際に、Realmに保存したデータを削除する
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCell.EditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-
-        if(editingStyle == UITableViewCell.EditingStyle.delete) {
-            do{
-                let realm = try Realm()
-                try realm.write {
-                    realm.delete(self.todoItem[indexPath.row])
-                }
-                tableView.deleteRows(at: [(indexPath as IndexPath)], with: UITableView.RowAnimation.fade)
-            }catch{
-            }
-            tableView.reloadData()
-        }
+    
+    //セルの編集許可
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
     }
-}
+        
+        // TableViewのCellの削除を行った際に、Realmに保存したデータを削除する
+        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+            if(editingStyle == UITableViewCell.EditingStyle.delete) {
+                do{
+                    let realm = try Realm()
+                    try realm.write {
+                        realm.delete(self.todoItem[indexPath.row])
+                    }
+                    tableView.deleteRows(at: [(indexPath as IndexPath)], with: UITableView.RowAnimation.fade)
+                }catch{
+                }
+                tableView.reloadData()
+            }
+    }
+    
+        }
+
