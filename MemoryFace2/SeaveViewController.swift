@@ -100,8 +100,6 @@ class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 }
                    print(url.absoluteString)
                }
-           
-        
         
         self.dismiss(animated: true, completion: nil)
     }
