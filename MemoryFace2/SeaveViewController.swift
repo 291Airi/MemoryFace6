@@ -74,6 +74,7 @@ class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UI
                }
 
         
+            
                // 選択した画像から PHAsset を取得
                // 画像ライブラリへのアクセスが許可されていない場合は nil が返ってきます
                guard let phAsset = info[.phAsset] as? PHAsset else { return }
