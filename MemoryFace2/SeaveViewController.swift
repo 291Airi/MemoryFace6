@@ -67,6 +67,8 @@ class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UI
             
             // defer はブロックを抜ける時に defer 内の処理が実行されます
             
+            
+            
                defer {
                   picker.dismiss(animated: true, completion: nil)
                }
