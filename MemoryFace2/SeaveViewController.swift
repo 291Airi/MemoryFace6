@@ -66,11 +66,12 @@ class SeaveViewController: UIViewController, UIImagePickerControllerDelegate, UI
                     //フォトライブラリを閉じる
             
             // defer はブロックを抜ける時に defer 内の処理が実行されます
+            
                defer {
                   picker.dismiss(animated: true, completion: nil)
                }
 
-            
+        
             
                // 選択した画像から PHAsset を取得
                // 画像ライブラリへのアクセスが許可されていない場合は nil が返ってきます
